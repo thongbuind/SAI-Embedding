@@ -1,4 +1,4 @@
-# SAI-Embedding_100M — Mô hình embedding tiếng Việt chuyển đổi từ LLM **decoder-only** theo hướng LLM2Vec
+# SAI-Embedding_100M — Mô hình embedding tiếng Việt chuyển đổi từ LLM theo hướng LLM2Vec
 
 **SAI-Embedding_100M** là mô hình biểu diễn câu và đoạn văn tiếng Việt, được xây dựng bằng cách chuyển mô hình ngôn ngữ [**SAI_100M**](https://huggingface.co/thongbuind/SAI_100M) thành một bộ mã hoá văn bản (text encoder) theo phương pháp **LLM2Vec**. Toàn bộ trọng số backbone được tái sử dụng từ SAI_100M, mô hình không được huấn luyện lại từ đầu và không thêm tầng chiếu (projection head) nào.
 
@@ -126,24 +126,7 @@ Cả hai giai đoạn dùng cùng một lịch learning rate:
 
 Gradient được clip ở norm 1,0. Trên GPU, mô hình huấn luyện với mixed precision bf16.
 
-## Thiết lập đánh giá
-
-| Task | Lĩnh vực | Nguồn | Quy mô |
-|---|---|---|---|
-| Zalo Legal | Luật | [`GreenNode/zalo-ai-legal-text-retrieval-vn`](https://huggingface.co/datasets/GreenNode/zalo-ai-legal-text-retrieval-vn) (test) | 788 query / 61k văn bản |
-| TVPL | Luật | [`GreenNode/TVPL-Retrieval-VN`](https://huggingface.co/datasets/GreenNode/TVPL-Retrieval-VN) (test) | 3.000 query / 10,6k văn bản |
-| ViQuAD | Wikipedia | [`taidng/UIT-ViQuAD2.0`](https://huggingface.co/datasets/taidng/UIT-ViQuAD2.0) (test) | 7.184 query / 1.241 đoạn |
-| nano-MSMARCO-vi | Web | [`GreenNode/nano-msmarco-vn`](https://huggingface.co/datasets/GreenNode/nano-msmarco-vn) (dev) | 3.498 query / 104k đoạn |
-| STS-B-vi | Tương đồng câu | [`GreenNode/stsbenchmark-sts-vn`](https://huggingface.co/datasets/GreenNode/stsbenchmark-sts-vn) (test) | 1.379 cặp |
-
-- **Độ đo:** nDCG@10, MRR@10, Recall@10 và Recall@100 cho retrieval; hệ số tương quan Spearman cho STS.
-- **Điểm tổng hợp (main score):** trung bình nDCG@10 của các task retrieval và Spearman của STS, tính ở 768 chiều.
-- **Chống rò rỉ dữ liệu:** chỉ dùng split test (riêng nano-MSMARCO dùng split dev). Mọi truy vấn trong dữ liệu huấn luyện trùng với truy vấn của tập dev hoặc eval đều bị loại bỏ.
-- Khi đo các mô hình khác, prefix và cách pooling được đặt đúng theo model card của từng mô hình.
-
-## Kết quả thực nghiệm
-
-### So sánh với các mô hình khác
+## Benchmark với các mô hình tương tự
 
 Bảng dưới báo cáo nDCG@10 cho các task retrieval và Spearman cho STS-B-vi. Mỗi mô hình được đo ở số chiều đầy đủ của nó. Main score là trung bình của năm cột. Giá trị cao nhất mỗi cột được in đậm.
 
