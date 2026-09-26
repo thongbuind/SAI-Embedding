@@ -1,16 +1,3 @@
----
-language:
-  - vi
-pipeline_tag: sentence-similarity
-base_model: thongbuind/SAI_100M
-tags:
-  - embeddings
-  - retrieval
-  - llm2vec
-  - matryoshka
-  - custom-code
----
-
 # SAI-Embedding_100M — Mô hình embedding tiếng Việt chuyển đổi từ LLM **decoder-only** theo hướng LLM2Vec
 
 **SAI-Embedding_100M** là mô hình biểu diễn câu và đoạn văn tiếng Việt, được xây dựng bằng cách chuyển mô hình ngôn ngữ [**SAI_100M**](https://huggingface.co/thongbuind/SAI_100M) thành một bộ mã hoá văn bản (text encoder) theo phương pháp **LLM2Vec**. Toàn bộ trọng số backbone được tái sử dụng từ SAI_100M, mô hình không được huấn luyện lại từ đầu và không thêm tầng chiếu (projection head) nào.
