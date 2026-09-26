@@ -1,0 +1,9 @@
+torch>=2.5
+numpy
+scipy
+sentencepiece
+pandas
+pyarrow
+huggingface_hub
+transformers
+pyvi

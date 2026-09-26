@@ -1,0 +1,80 @@
+{
+  "name": "intfloat__multilingual-e5-small",
+  "label": "multilingual-e5-small",
+  "source": "intfloat/multilingual-e5-small",
+  "kind": "hf",
+  "params": 117653760,
+  "dim": 384,
+  "dims": [
+    384
+  ],
+  "main_score": 76.54917871319958,
+  "results": {
+    "zalo_legal": {
+      "dim384": {
+        "ndcg@10": 62.02437888891562,
+        "mrr@10": 56.744218838127466,
+        "recall@10": 79.06091370558376,
+        "recall@100": 97.77918781725889
+      },
+      "num_queries": 788,
+      "num_docs": 61425
+    },
+    "tvpl_legal": {
+      "dim384": {
+        "ndcg@10": 77.8008350748973,
+        "mrr@10": 74.94597883597883,
+        "recall@10": 89.73055555555554,
+        "recall@100": 97.07777777777778
+      },
+      "num_queries": 3000,
+      "num_docs": 10576
+    },
+    "viquad": {
+      "dim384": {
+        "ndcg@10": 79.48238916277344,
+        "mrr@10": 75.33692044932302,
+        "recall@10": 92.35801781737194,
+        "recall@100": 99.28312917594656
+      },
+      "num_queries": 7184,
+      "num_docs": 1241
+    },
+    "msmarco_nano": {
+      "dim384": {
+        "ndcg@10": 80.72324135169896,
+        "mrr@10": 78.15399048889614,
+        "recall@10": 89.72269868496284,
+        "recall@100": 95.07813988946064
+      },
+      "num_queries": 3498,
+      "num_docs": 103655
+    },
+    "vf8_manual": {
+      "dim384": {
+        "ndcg@10": 80.55235506073414,
+        "mrr@10": 78.57638888888889,
+        "recall@10": 92.60416666666667,
+        "recall@100": 99.375
+      },
+      "num_queries": 160,
+      "num_docs": 497
+    },
+    "sts_vn": {
+      "dim384": {
+        "spearman": 78.71187274017805
+      },
+      "num_pairs": 1379
+    },
+    "main_score": 76.54917871319958
+  },
+  "speed": {
+    "docs_per_s": 858.1279473298483,
+    "query_latency_ms": 12.272140505956486,
+    "num_speed_docs": 1024
+  },
+  "eval_seconds": 201.29993295669556,
+  "device": "cuda",
+  "split": "eval",
+  "created": "2026-09-26T11:41:10"
+}

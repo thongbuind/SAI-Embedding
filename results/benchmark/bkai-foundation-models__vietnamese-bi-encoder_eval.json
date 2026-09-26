@@ -1,0 +1,70 @@
+{
+  "name": "bkai-foundation-models__vietnamese-bi-encoder",
+  "label": "vietnamese-bi-encoder",
+  "source": "bkai-foundation-models/vietnamese-bi-encoder",
+  "kind": "hf",
+  "params": 134998272,
+  "dim": 768,
+  "dims": [
+    768
+  ],
+  "main_score": 76.21479895313266,
+  "results": {
+    "zalo_legal": {
+      "dim768": {
+        "ndcg@10": 84.54506839512645,
+        "mrr@10": 81.36290387559423,
+        "recall@10": 94.47969543147208,
+        "recall@100": 98.60406091370558
+      },
+      "num_queries": 788,
+      "num_docs": 61425
+    },
+    "tvpl_legal": {
+      "dim768": {
+        "ndcg@10": 77.16755763291603,
+        "mrr@10": 74.55395502645503,
+        "recall@10": 88.63333333333333,
+        "recall@100": 96.55833333333334
+      },
+      "num_queries": 3000,
+      "num_docs": 10576
+    },
+    "viquad": {
+      "dim768": {
+        "ndcg@10": 70.62119158552147,
+        "mrr@10": 65.91464829250187,
+        "recall@10": 85.43986636971047,
+        "recall@100": 96.875
+      },
+      "num_queries": 7184,
+      "num_docs": 1241
+    },
+    "msmarco_nano": {
+      "dim768": {
+        "ndcg@10": 75.34357686186934,
+        "mrr@10": 72.80546933848822,
+        "recall@10": 84.37678673527729,
+        "recall@100": 91.98351438917476
+      },
+      "num_queries": 3498,
+      "num_docs": 103655
+    },
+    "sts_vn": {
+      "dim768": {
+        "spearman": 73.39660029022997
+      },
+      "num_pairs": 1379
+    },
+    "main_score": 76.21479895313266
+  },
+  "speed": {
+    "docs_per_s": 229.6651825005163,
+    "query_latency_ms": 7.2056325152516365,
+    "num_speed_docs": 1024
+  },
+  "eval_seconds": 637.8448488712311,
+  "device": "cuda",
+  "split": "eval",
+  "created": "2026-09-26T11:59:58"
+}

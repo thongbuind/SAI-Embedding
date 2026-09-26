@@ -1,0 +1,23 @@
+{
+    "model_size": "100M",
+    "causal": false,
+    "pooling": "mean",
+    "query_prefix": "truy vấn: ",
+    "passage_prefix": "văn bản: ",
+    "mrl_dims": [768, 512, 256, 128, 64],
+
+    "eval": {
+        "retrieval_tasks": {
+            "zalo_legal": "data/embedding/eval/zalo_legal",
+            "tvpl_legal": "data/embedding/eval/tvpl_legal",
+            "viquad": "data/embedding/eval/viquad",
+            "msmarco_nano": "data/embedding/eval/msmarco_nano"
+        },
+        "sts_tasks": {
+            "sts_vn": "data/embedding/eval/sts_vn.jsonl"
+        },
+        "max_query_len": 64,
+        "max_passage_len": 512,
+        "batch_size": 128
+    }
+}

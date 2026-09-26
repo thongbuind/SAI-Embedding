@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+
+venv/
+.venv/
+env/
+.env
+
+.DS_Store
+
+# Dữ liệu, checkpoint, kết quả: không đưa lên repo
+/data/
+/model/
+/tmp/
+
+*.pt
+*.safetensors
+*.tgz
+*.log
